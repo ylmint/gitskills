@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/addContact.do" location="50,50" dimension="299,132" />
+  <StrutsActivity path="/list.htm" location="350,250" dimension="114,60" />
+  <StrutsActivity path="list" location="650,50" dimension="291,132" />
+  <StrutsActivity path="/list.jsp" location="50,250" dimension="104,60" />
+  <StrutsActivity path="/list.do" location="650,250" dimension="291,132" />
+  <StrutsActivity path="/deleteContact.do" />
+  <StrutsTransition id="/deleteContact.do,success,/list.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="795,316" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addContact.do,success,/list.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="199,182" />
+      <AbsolutePoint location="199,325" />
+      <AbsolutePoint location="650,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/list.do,success,/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,355" />
+      <AbsolutePoint location="102,355" />
+      <AbsolutePoint location="102,310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addContact.do,success,/list.htm,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="199,116" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans>
+  	<form-bean name="contactForm" type="com.web.ContactForm"></form-bean>
+  </form-beans>
+  
+  <global-exceptions />
+  <global-forwards />
+  
+  <action-mappings>
+  	<action path="/addContact" type="com.web.AddContactAction" name="contactForm">
+  		<forward name="success" redirect="true" path="/list.do"></forward>
+  	</action>
+  	
+  	<action path="/list" type="com.web.ListContactAction">
+  		<forward name="success" path="/list.jsp"></forward>
+  	</action>
+  </action-mappings>
+  
+  <message-resources parameter="com.struts.ApplicationResources" />
+</struts-config>
+
